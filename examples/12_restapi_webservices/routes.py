@@ -15,7 +15,7 @@ class Route(BaseModel):
     gps_points: list[GPSPoint]
 
     def get_point(self, pid: int):
-        return self.find_point[pid]
+        return self.gps_points[pid]
 
     def add_point(self, gps_point: GPSPoint) -> GPSPoint:
         self.gps_points.append(gps_point)
